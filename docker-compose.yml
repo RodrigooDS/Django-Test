@@ -14,7 +14,7 @@ services:
       - DB_NAME=mydatabase
       - DB_USER=myuser
       - DB_PASSWORD=mypassword
-      - ALLOWED_HOSTS=127.0.0.1, localhost
+      - ALLOWED_HOSTS=127.0.0.1, localhost, 0.0.0.0
       - DEBUG=True
     depends_on:
       - db

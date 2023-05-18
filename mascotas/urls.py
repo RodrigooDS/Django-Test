@@ -8,7 +8,8 @@ from .views import (
     AnimalPartialUpdateAPIView,
 )
 
-app_name = "core"
+app_name = "mascotas"
+
 
 urlpatterns = [
     path("animals/", AnimalListAPIView.as_view(), name="animal-list"),

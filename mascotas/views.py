@@ -15,7 +15,7 @@ class AnimalListAPIView(generics.ListAPIView):
     serializer_class = PatientWithAnimalSerializer
 
     def get_queryset(self):
-        return Animal.objects.all()
+        return Animal.objects.all().order_by("id")
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())

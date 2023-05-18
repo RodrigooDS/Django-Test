@@ -65,14 +65,10 @@ class AnimalListAPIView(generics.ListAPIView):
             for patient in patients:
                 if patient["uuid"] == animal.paciente:
                     animal.patient = Paciente(
-                        # uuid=patient['uuid'],
                         nombre=patient["nombre"],
                         apellido_paterno=patient["apellido_paterno"],
                         apellido_materno=patient["apellido_materno"],
                     )
-                    # animal.paciente = patient
-
-        # logger.debug(page)
         return page
 
 
